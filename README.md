@@ -21,6 +21,7 @@ Ce projet est un modèle de formulaire d’authentification et d’inscription, 
 📂 Structure du projet
 
 * PROJECTT/
+* 
 │
 ├── 📄 index.php           # Page d'accueil — portail d'entrée
 
@@ -29,19 +30,28 @@ Ce projet est un modèle de formulaire d’authentification et d’inscription, 
 ├── 📄 register.php        # Formulaire d'inscription multi-champs
 
 ├── 📄 logout.php          # Destruction de session et redirection
+
 ├── 📄 verify_email.php    # Validation du lien de vérification email
+
 ├── 📄 dashboard.php       # Tableau de bord post-connexion
+
 ├── 📄 home.php            # Feed social (posts, stories, sidebar)
+
 ├── 📄 profile.php         # Page de profil utilisateur
+
 │
 ├── 📄 auth.php            # 🔑 Cœur du système — toutes les fonctions auth
+
 ├── 📄 db.php              # Connexion PDO + création/migration de table
 │
 ├── 🎨 style.css           # Feuille de styles principale (thème + dark mode)
+
 ├── ⚙️ scripte.js          # Dark mode toggle + menu paramètres
 │
 ├── 🗄️ dbname.sql          # Script SQL pour créer la base de données
+
 ├── 🖼️ imag.jpeg           # Logo SocialBook
+
 ├── 🎬 video.mp4           # Vidéo de fond (pages auth)
 │
 └── 📁 images/             # Icônes, avatars, images de feed
