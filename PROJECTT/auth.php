@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 require 'db.php';
 
@@ -41,7 +41,10 @@ function isValidDateOfBirth(string $value): bool
     $date = DateTime::createFromFormat('Y-m-d', $value);
     $errors = DateTime::getLastErrors();
 
-    if (!$date || $errors['warning_count'] > 0 || $errors['error_count'] > 0) {
+    $warningCount = is_array($errors) ? (int) ($errors['warning_count'] ?? 0) : 0;
+    $errorCount = is_array($errors) ? (int) ($errors['error_count'] ?? 0) : 0;
+
+    if (!$date || $warningCount > 0 || $errorCount > 0) {
         return false;
     }
 
@@ -145,6 +148,7 @@ function createUser(array $input): array
             'INSERT INTO users (name, family_name, date_of_birth, email, password, verification_code, verified)
              VALUES (:name, :family_name, :date_of_birth, :email, :password, :verification_code, 0)'
         );
+
         $stmt->execute([
             'name' => $data['name'],
             'family_name' => $data['family_name'],
@@ -189,15 +193,14 @@ function verifyUserEmail(string $email, string $code): bool
 
 function authenticate(string $email, string $password)
 {
-    global $pdo;
-
     try {
         $user = getUser($email);
+
         if (!$user || !password_verify($password, $user['password'])) {
             return null;
         }
 
-        if (!$user['verified']) {
+        if (!(int) $user['verified']) {
             return 'not_verified';
         }
 
