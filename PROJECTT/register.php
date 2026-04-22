@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require 'auth.php';
 
 if (isLoggedIn()) {
