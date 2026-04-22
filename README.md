@@ -39,7 +39,7 @@ Ce projet est un modèle de formulaire d’authentification et d’inscription, 
 
 ├── 📄 profile.php              # Page de profil utilisateur
 
-│
+
 ├── 📄 auth.php                 # 🔑 Cœur du système — toutes les fonctions auth
 
 ├── 📄 db.php                   # Connexion PDO + création/migration de table
