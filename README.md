@@ -78,6 +78,32 @@ Ce projet est un modèle de formulaire d’authentification et d’inscription, 
 | `loginUser()` | Stocke l'utilisateur en session |
 | `logout()` | Détruit la session proprement |
 
+🚀 Fonctionnalités
+
+👤 Authentification
+- ✅ **Inscription** avec prénom, nom, date de naissance, email et mot de passe
+- ✅ **Connexion sécurisée** avec gestion des erreurs explicites
+- ✅ **Déconnexion propre** avec destruction complète de la session
+- ✅ **Vérification de l'email** avant accès au compte (lien de confirmation unique)
+- ✅ **Redirection intelligente** selon l'état de connexion
+
+🛡️ Sécurité
+- ✅ **Hachage des mots de passe** avec `password_hash()` (bcrypt)
+- ✅ **Vérification sécurisée** via `password_verify()`
+- ✅ **Comparaison de tokens** via `hash_equals()` (protection contre les attaques temporelles)
+- ✅ **Requêtes préparées PDO** (protection contre les injections SQL)
+- ✅ **Validation serveur** complète sur tous les champs
+- ✅ **Échappement HTML** via `htmlspecialchars()` (protection XSS)
+- ✅ **Filtres PHP** (`FILTER_VALIDATE_EMAIL`, `FILTER_SANITIZE_EMAIL`)
+
+🎨 Interface
+- ✅ Design **glassmorphism** moderne avec animations CSS
+- ✅ **Fond vidéo** dynamique sur les pages login et register
+- ✅ Interface **feed social** avec stories, posts et sidebar
+- ✅ **Mode sombre** (dark mode) avec persistance via `localStorage`
+- ✅ **Responsive design** adapté mobile et tablette
+- ✅ Page de **profil utilisateur** complète
+
 
 👥 Auteurs
 
