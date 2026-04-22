@@ -74,7 +74,7 @@ $pass   = '';       // Votre mot de passe MySQL si configuré
 
 **5. Accéder au projet**
 
-Ouvrez votre navigateur : [http://localhost/socialbook-auth/](http://localhost/PROJECTT/)
+Ouvrez votre navigateur : [http://localhost/PROJECTT/](http://localhost/PROJECTT/)
 
 
 
