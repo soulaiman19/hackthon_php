@@ -23,8 +23,11 @@ Ce projet est un modèle de formulaire d’authentification et d’inscription, 
 * PROJECTT/
 │
 ├── 📄 index.php           # Page d'accueil — portail d'entrée
+
 ├── 📄 login.php           # Formulaire de connexion (fond vidéo)
+
 ├── 📄 register.php        # Formulaire d'inscription multi-champs
+
 ├── 📄 logout.php          # Destruction de session et redirection
 ├── 📄 verify_email.php    # Validation du lien de vérification email
 ├── 📄 dashboard.php       # Tableau de bord post-connexion
