@@ -7,9 +7,12 @@ Ce projet est un modèle de formulaire d’authentification et d’inscription, 
 
 🛠️ Technologies utilisées
 
-* Langage : PHP
-* Base de données : MySQL (via PDO)
-* Frontend : HTML, CSS, JavaScript
+| Couche | Technologies |
+|--------|-------------|
+| **Back-end** | PHP , Sessions PHP |
+| **Base de données** |  MySQL (via PDO) |
+| **Front-end** | HTML5, CSS3, JavaScript |
+| **Serveur local** | XAMPP  |
 
 ⚙️ Installation
 
