@@ -18,14 +18,31 @@ Ce projet est un modèle de formulaire d’authentification et d’inscription, 
 3. Modifiez les paramètres de connexion dans db.php.
 4. Ouvrez index.php dans votre navigateur pour commencer.
 
-📂 Fichiers principaux
+📂 Structure du projet
 
-* index.php : Page d’accueil avec le formulaire de connexion.
-* auth.php : Vérification des identifiants et gestion de la session.
-* register.php : Formulaire d’inscription des utilisateurs.
-* dashboard.php : Tableau de bord après connexion.
-* script.js : Logique JavaScript pour des interactions dynamiques.
-* style.css : Feuille de style pour le design.
+* PROJECTT/
+│
+├── 📄 index.php           # Page d'accueil — portail d'entrée
+├── 📄 login.php           # Formulaire de connexion (fond vidéo)
+├── 📄 register.php        # Formulaire d'inscription multi-champs
+├── 📄 logout.php          # Destruction de session et redirection
+├── 📄 verify_email.php    # Validation du lien de vérification email
+├── 📄 dashboard.php       # Tableau de bord post-connexion
+├── 📄 home.php            # Feed social (posts, stories, sidebar)
+├── 📄 profile.php         # Page de profil utilisateur
+│
+├── 📄 auth.php            # 🔑 Cœur du système — toutes les fonctions auth
+├── 📄 db.php              # Connexion PDO + création/migration de table
+│
+├── 🎨 style.css           # Feuille de styles principale (thème + dark mode)
+├── ⚙️ scripte.js          # Dark mode toggle + menu paramètres
+│
+├── 🗄️ dbname.sql          # Script SQL pour créer la base de données
+├── 🖼️ imag.jpeg           # Logo SocialBook
+├── 🎬 video.mp4           # Vidéo de fond (pages auth)
+│
+└── 📁 images/             # Icônes, avatars, images de feed
+
 
 👥 Auteurs
 
