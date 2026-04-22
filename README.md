@@ -60,6 +60,22 @@ Ce projet est un modèle de formulaire d’authentification et d’inscription, 
 └── 📁 images/                 # Icônes, avatars, images de feed
 
 
+ 🔑 Fichier `auth.php` — Architecture des fonctions
+
+| Fonction | Rôle |
+|----------|------|
+| `isLoggedIn()` | Vérifie si l'utilisateur est connecté |
+| `currentUser()` | Retourne les données de l'utilisateur en session |
+| `requireLogin()` | Redirige vers login si non connecté |
+| `validateRegistrationData()` | Valide tous les champs du formulaire |
+| `createUser()` | Insère un nouvel utilisateur en base |
+| `getUser()` | Récupère un utilisateur par email |
+| `authenticate()` | Vérifie email + mot de passe |
+| `verifyUserEmail()` | Active le compte via token de vérification |
+| `loginUser()` | Stocke l'utilisateur en session |
+| `logout()` | Détruit la session proprement |
+
+
 👥 Auteurs
 
 * 	Mariam Ait idkir
