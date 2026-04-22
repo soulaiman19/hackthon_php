@@ -21,6 +21,64 @@ Ce projet est un modèle de formulaire d’authentification et d’inscription, 
 3. Modifiez les paramètres de connexion dans db.php.
 4. Ouvrez index.php dans votre navigateur pour commencer.
 
+
+## ⚙️ Installation
+
+### Prérequis
+
+- PHP **8.0+**
+- MySQL **5.7+** 
+- XAMPP / WAMP **ou** PHP built-in server
+
+---
+STEPS==================================================
+
+**1. Cloner ou copier le projet**
+```bash
+git clone https://github.com/votre-username/socialbook-auth.git
+```
+Placez le dossier dans `C:/xampp/htdocs/` (Windows) ou `/opt/lampp/htdocs/` (Linux).
+
+**2. Démarrer XAMPP**
+
+Lancez les modules **Apache** et **MySQL** depuis le panneau de contrôle XAMPP.
+
+**3. Créer la base de données**
+
+Ouvrez [phpMyAdmin](http://localhost/phpmyadmin) et exécutez le script SQL :
+```sql
+-- Coller le contenu de dbname.sql
+CREATE DATABASE IF NOT EXISTS app_php;
+USE app_php;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    family_name VARCHAR(100) NOT NULL,
+    date_of_birth DATE NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    verified TINYINT DEFAULT 0,
+    verification_code VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
+
+**4. Configurer la connexion** dans `db.php`
+```php
+$host   = 'localhost';
+$dbname = 'app_php';
+$user   = 'root';
+$pass   = '';       // Votre mot de passe MySQL si configuré
+```
+
+**5. Accéder au projet**
+
+Ouvrez votre navigateur : [http://localhost/socialbook-auth/](http://localhost/socialbook-auth/)
+
+
+
+
 📂 Structure du projet
 
 * PROJECTT/
@@ -112,3 +170,5 @@ Ce projet est un modèle de formulaire d’authentification et d’inscription, 
 * 	Aya Rizki
 * 	Lahoucine Agnaou
 * 	Soulaiman Joui
+
+We made with ❤️ 
