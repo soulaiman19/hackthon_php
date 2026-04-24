@@ -171,6 +171,7 @@ function createUser(array $input): array
     }
 }
 //==========================================================
+//houssin ============================================
 function verifyUserEmail(string $email, string $code): bool
 {
     global $pdo;
