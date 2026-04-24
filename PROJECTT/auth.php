@@ -1,4 +1,5 @@
 <?php
+//AYA  ===============================================
 session_start();
 require 'db.php';
 
@@ -19,7 +20,8 @@ function requireLogin(): void
         exit;
     }
 }
-
+//==================================================
+//MOHAMED  =========================================
 function textLength(string $value): int
 {
     return function_exists('mb_strlen') ? mb_strlen($value) : strlen($value);
@@ -102,7 +104,8 @@ function validateRegistrationData(array $input): array
         'data' => $data,
     ];
 }
-
+//==================================================
+// PERTIE MARIAM====================================
 function getUser(string $email): ?array
 {
     global $pdo;
@@ -167,7 +170,7 @@ function createUser(array $input): array
         return ['success' => false, 'message' => 'Erreur lors de l\'inscription.'];
     }
 }
-
+//==========================================================
 function verifyUserEmail(string $email, string $code): bool
 {
     global $pdo;
@@ -182,6 +185,7 @@ function verifyUserEmail(string $email, string $code): bool
             return false;
         }
 
+// PETIR MARIAM =======================================
         $stmt = $pdo->prepare('UPDATE users SET verified = 1, verification_code = NULL WHERE email = :email');
         $stmt->execute(['email' => $email]);
 
@@ -189,8 +193,10 @@ function verifyUserEmail(string $email, string $code): bool
     } catch (PDOException $e) {
         return false;
     }
+// =================================================
 }
 
+// PETIR AYA =======================================
 function authenticate(string $email, string $password)
 {
     try {
@@ -222,6 +228,8 @@ function loginUser(array $user): void
     ];
 }
 
+// =============================================
+//HOUSSIN =======================================
 function logout(): void
 {
     session_unset();
